@@ -9,7 +9,7 @@ cardHeart.forEach((button) => {
 });
 
 // call section
-
+const callHistory = document.getElementById("call-history");
 const callBtn = document.querySelectorAll(".call-btn");
 callBtn.forEach((button) => {
   button.addEventListener("click", () => {
@@ -27,8 +27,39 @@ callBtn.forEach((button) => {
     if (nowCoin >= deductionCoin) {
       nowCoin = nowCoin - deductionCoin;
       navConin.textContent = nowCoin;
-
       alert(mainAlert);
+
+      const now = new Date();
+      const timeString = now.toLocaleTimeString([], {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+
+      const newHistoryItem = document.createElement("div");
+      newHistoryItem.classList.add(
+        "flex",
+        "justify-between",
+        "items-center",
+        "py-2",
+        "mb-3",
+        "bg-[#fafafa]",
+        "p-4",
+        "rounded-lg"
+      );
+
+      const callLabel = paragraph.textContent;
+      const callNumber = heading.textContent;
+
+      newHistoryItem.innerHTML = `
+          <div>
+          <div class="text-sm text-gray-500">${callNumber}</div>
+            <div class="font-semibold text-gray-800">${callLabel}</div>
+            
+          </div>
+          <div class="text-sm text-gray-500">${timeString}</div>
+        `;
+
+      callHistory.prepend(newHistoryItem);
     } else {
       alert("Insufficient coin.");
     }
