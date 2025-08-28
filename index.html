@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>National Emergency Service Directory</title>
     <!-- Tailwind cdn -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- Font awesome cdn -->
@@ -35,7 +35,7 @@
         <div
           class="h-10 w-20 bg-[#41ff6b1a] rounded-2xl flex justify-center items-center gap-2"
         >
-          <span>100</span>
+          <span id="nav-coin">100</span>
           <img src="./assets/coin.png" alt="" class="h-5" />
         </div>
         <div
@@ -62,7 +62,7 @@
     <section class="container mx-auto flex gap-5 mt-8 mb-15">
       <div class="grid grid-cols-3 gap-5 w-full">
         <div>
-          <div class="bg-white ] shadow-xl rounded-lg p-5 max-w-sm">
+          <div class="card bg-white ] shadow-xl rounded-lg p-5 max-w-sm">
             <div class="flex justify-between">
               <img
                 src="./assets/emergency.png"
@@ -74,8 +74,8 @@
               </button>
             </div>
             <h2 class="font-bold">National Emergency Number</h2>
-            <p>National Emergency</p>
-            <h1 class="font-bold text-[26px] mt-2">999</h1>
+            <p class="card-p">National Emergency</p>
+            <h1 class="card-h font-bold text-[26px] mt-2">999</h1>
             <div class="bg-gray-200 w-13 rounded-lg text-center">All</div>
             <div class="flex gap-4 mt-4">
               <button
@@ -85,7 +85,7 @@
                 Copy
               </button>
               <button
-                class="flex justify-center items-center gap-2 w-full border rounded-md hover:bg-gray-400 bg-green-600 text-white p-2"
+                class="call-btn flex justify-center items-center gap-2 w-full border rounded-md hover:bg-gray-400 bg-green-600 text-white p-2"
               >
                 <i class="fa-solid fa-phone"></i>
                 Call
@@ -94,7 +94,7 @@
           </div>
         </div>
         <div>
-          <div class="bg-white ] shadow-xl rounded-lg p-5 max-w-sm">
+          <div class="card bg-white ] shadow-xl rounded-lg p-5 max-w-sm">
             <div class="flex justify-between">
               <img
                 src="./assets/emergency.png"
@@ -106,8 +106,8 @@
               </button>
             </div>
             <h2 class="font-bold">National Emergency Number</h2>
-            <p>National Emergency</p>
-            <h1 class="font-bold text-[26px] mt-2">999</h1>
+            <p class="card-p">National Emergency</p>
+            <h1 class="card-h font-bold text-[26px] mt-2">999</h1>
             <div class="bg-gray-200 w-13 rounded-lg text-center">All</div>
             <div class="flex gap-4 mt-4">
               <button
@@ -117,7 +117,7 @@
                 Copy
               </button>
               <button
-                class="flex justify-center items-center gap-2 w-full border rounded-md hover:bg-gray-400 bg-green-600 text-white p-2"
+                class="call-btn flex justify-center items-center gap-2 w-full border rounded-md hover:bg-gray-400 bg-green-600 text-white p-2"
               >
                 <i class="fa-solid fa-phone"></i>
                 Call
@@ -350,7 +350,10 @@
           </div>
         </div>
       </div>
-      <div class="bg-white w-[300px] flex justify-between p-5 rounded-lg">
+      <div
+        id="call-history-list"
+        class="bg-white w-[300px] flex justify-between p-5 rounded-lg"
+      >
         <div class="flex text-center">
           <div><i class="fa-regular fa-clock"></i></div>
           <p>Call history</p>
