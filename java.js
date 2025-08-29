@@ -65,3 +65,8 @@ callBtn.forEach((button) => {
     }
   });
 });
+
+// clear history
+document.getElementById("clear-btn").addEventListener("click", function () {
+  callHistory.innerText = "";
+});
