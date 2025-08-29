@@ -61,7 +61,7 @@ callBtn.forEach((button) => {
 
       callHistory.prepend(newHistoryItem);
     } else {
-      alert("Insufficient coin.");
+      alert(["Insufficient coin."]);
     }
   });
 });
@@ -69,4 +69,20 @@ callBtn.forEach((button) => {
 // clear history
 document.getElementById("clear-btn").addEventListener("click", function () {
   callHistory.innerText = "";
+});
+// all copy buttons
+const copyButtons = document.querySelectorAll(".primary-btn");
+
+copyButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const navCopy = document.getElementById("copy-head");
+    const card = button.closest(".card");
+
+    const h1Text = card.querySelector(".card-h").textContent;
+    navigator.clipboard.writeText(h1Text).then(() => {
+      alert(`Number copied: ${h1Text}`);
+      totalCount++;
+      navCopy.textContent = totalCount;
+    });
+  });
 });
