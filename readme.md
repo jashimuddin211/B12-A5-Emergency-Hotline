@@ -1,165 +1,42 @@
-## WELCOME TO ( সহজ সরল সিম্পল ) ASSIGNMENT-005
-
-### 📅 Deadline For 60 marks: 29th August, 2025 (11:59 pm ⏱️)
-
-### 📅 No Deadline For 50 marks
-
-### 📅 Deadline For 30 marks: Any time after 29th August.
-
----
-
-## ✅ Main Requirements (50 Marks)
-
-### 1. Navbar
-
-- **Website name & logo** on the left as Figma
-- **Heart icon, coin count (default-100), and Copy Count** on the right as Figma
-
----
-
-### 2. Hero Section
-
-- **Background Gradient** in the Whole Section
-- **A Relevant Logo** at the top-center
-- **Section Title** in the center
-- **A Relevant Slogan** in the bottom Center
-
----
-
-### 2. Main Section
-
-This Section will have layout as figma
-
-<table border=1 width="100%" cellpadding="50">
-<tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
- </tr>
- <tr>
-    <td colspan=9 >Card Section</td>
-    <td colspan=3>History Section</td>
- </tr>
-</table>
-
-### Emergency Hotline Section
-
-- **Show Minimum 6 cards**. Each card will contain:
-  - Icon or Image
-  - Relevant Name
-  - Relevant Name in English
-  - Hotline number for calling
-  - Category Badge
-  - 💗 icon at left
-  - **2 buttons** at the bottom: Copy and Call with icons as Figma
-
-### History Section
-
-- **A white Background** in the whole section
-- **History Title with icon** at the top-left as Figma
-- **Clear History Button** at the top-right as Figma
-
----
-
-### 3. Responsiveness (5 Marks)
-
-- Website should be fully **responsive for mobile devices** (implementation up to you)
-
----
-
-## Functionalities
-
-### 4. Heart Icons
-
-- Clicking on the 💗 **heart icon** of any card will increase the count in the Navbar
-
----
-
-### 5. Call Buttons
-
-- On clicking a card's **Call Button**, following actions will happen:
-  - Show an **alert** with a message including the service name and number
-  - Each call will **cut 20 coins**. Reduce Coin after each click.
-  - If coins are less than 20, show a relevant alert and terminate the process.
-  - Add this service into the **Call History section** with:
-    - Service name
-    - Service number
-
----
-
-### 5. Call History Section
-
-- Show all called services with name & number. This will empty initially. when call button clicked it will filled dynamically.
-- A **Clear History button** on the right
-- Clicking this button will remove all data from call history
-
----
-
-## Create Readme
-
-You have to create a `Readme.md` file. and write down following questions. Dont Try to copy paste from AI Tools. Just write what you know about these. If you don't know , then search , learn , understand and then write.
-
-### 6. Answer the following questions clearly:
-
 1. What is the difference between **getElementById, getElementsByClassName, and querySelector / querySelectorAll**?
+   Ans:
+   getElementById-
+   This as the fastest, most direct route. It finds a single element by its unique ID. It's super fast because IDs are supposed to be one of a kind.
+
+getElementsByClassName-
+This one is for getting a group of elements. It returns a "live" collection of all elements with a specific class name. "Live" means if you add or remove an element with that class later, the collection automatically updates.
+
+querySelector and querySelectorAll-
+These are the most flexible of the bunch. They let you select elements using any CSS selector you can think of (like classes, IDs, tag names, or even complex combinations).
+querySelector returns just the first element it finds that matches the selector.
+querySelectorAll returns a static list of all matching elements. "Static" means it's a snapshot in time; it won't update automatically if the DOM changes.
+
 2. How do you **create and insert a new element into the DOM**?
+   Ans:
+   To create and insert a new element into the DOM, It typically follow a three-step process:
+
+Create the element: Use document.createElement('tagName'). This method creates a new node in memory.
+
+Customize the element: it can set properties like textContent, className, or id, or use setAttribute() to add attributes.
+
+Insert the element: Append the new element as a child to an existing parent element in the DOM using methods like appendChild() or append().  
 3. What is **Event Bubbling** and how does it work?
+Ans:
+Event bubbling is a mechanism where an event that occurs on an element propagates up through its parent elements in the DOM tree. When an event, like a click, happens on a nested element, the browser first executes the event handler on that element. It then "bubbles" the event up to the parent, then to the parent's parent, and so on, all the way up to the document object.
+
 4. What is **Event Delegation** in JavaScript? Why is it useful?
+   Ans:
+   Event delegation is a pattern that leverages event bubbling to efficiently handle events on multiple elements. Instead of adding a separate event listener to each child element, add a single event listener to a common parent element.
+
+It is useful because it-
+
+Improves performance: It reduces the number of event listeners in the DOM, which uses less memory.
+
+Simplifies code: You don't need a loop to attach a listener to every element, which is especially useful for dynamically generated content.
+
+Handles dynamic content: Events are automatically handled for new elements that are added to the parent later, as they also bubble up.  
 5. What is the difference between **preventDefault() and stopPropagation()** methods?
+Ans:
+preventDefault- This method stops the browser's default behavior for a specific event. For example, it can prevent a link from navigating to a new page, a form from submitting, or a checkbox from being checked
 
----
-
-## 🧪 Challenges Part (10 Marks)
-
-- On clicking the **Copy button**, show an alert and **increase the copy count** (3 Marks)
-
-- Hotline number will be **copied on click** so it can be pasted anywhere (4 Marks)
-
-💡Hint: You can ask for Help from `ChatGPT` Mamma . Just copy the below prompt , generate answer. use it with your own way.
-
-```bash
-I have a card with some text and a button inside it. I want that when a user clicks the button, some specific text from the card is copied to the clipboard using JavaScript. Please provide the code and explain it step by step.
-```
-
-- After clicking on the **Call button**, the **exact time of the call** will be shown in the Call History section (3 Marks)
-
-💡Hint: Search Google with that below question
-
-```bash
-How to get current local time in js
-```
-
----
-
-## ⚙️ Technology Stack
-
-- HTML
-- CSS ( Vanilla , Tailwind CSS , DaisyUI , Others - wheatever you like )
-- JavaScript ( Vanilla only. No Framework / Library Allowed )
-
----
-
-## 📌 Rules
-
-- ✅ Minimum **5 meaningful commits** required
-- ❌ No Lorem Ipsum or dummy placeholder text. Use **relevant content only**
-
----
-
-## 🔗 What to Submit
-
-- 📂 **GitHub Repository**
-- 🌐 **Live Link**
-
----
-
-# Let's Code and Achieve your Dream 🎯
+stopPropagation- This method stops the event from propagating further up the DOM tree (i.e., it stops the event from "bubbling"). It prevents the event from being handled by any parent event listeners
